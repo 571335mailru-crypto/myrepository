@@ -50,4 +50,38 @@
 > 7)Задать пароль пользователю user2
 > sudo passwd Alex5
 > 
-1. Чтобы создать пользователя вручную без команд адюзер и тп                                                                           >                                                                                 > необходимо добавить записи в 3 файла, такие как:                                >                                                                                 > /etc/passwd основная инфа о пользователе                                        > /etc/shadow зашифрованный пароль                                                > /etc/group группы                                                               >                                                                                 > чтобы открыть файл , необходимо использвоать команду:                           >                                                                                 > sudo nano /etc/passwd (работает на всех файлах)                                 >                                                                                 > и добавить новую строку в конец файла                                           >                                                                                 > 2. newalex:x:1700:1700:Новый пользователь:/home/newalex:/bin/bash               >                                                                                 > 3. Дальше добавляем пароль в /etc/shadow                                        >                                                                                 > sudo passwd newalex                                                             >                                                                                 > пароль: 1234567890                                                              >                                                                                 > 4. Создать группу /etc/group                                                    >                                                                                 > sudo nano /etc/group                                                            >                                                                                 > newalex:x:1500:                                                                 >                                                                                 > 5. Cоздаем папку и меняем владельца на                                          >                                                                                 > sudo mkdir /home/newalex                                                        > sudo chown newalex:newalex /home/newalex                                        > sudo chmod 755 /home/newalex                                                    >                                                                                 > 6. проверить папку на наличие: ls -ld /home/newalex
+1. Чтобы создать пользователя вручную без команд адюзер и тп 
+
+необходимо добавить записи в 3 файла, такие как: 
+
+/etc/passwd основная инфа о пользователе
+/etc/shadow зашифрованный пароль
+/etc/group группы 
+
+чтобы открыть файл , необходимо использвоать команду: 
+
+sudo nano /etc/passwd (работает на всех файлах)
+
+и добавить новую строку в конец файла 
+
+2. newalex:x:1700:1700:Новый пользователь:/home/newalex:/bin/bash
+
+3. Дальше добавляем пароль в /etc/shadow
+
+sudo passwd newalex
+
+пароль: 1234567890
+
+4. Создать группу /etc/group
+
+sudo nano /etc/group
+
+newalex:x:1500:
+
+5. Cоздаем папку и меняем владельца на 
+
+sudo mkdir /home/newalex
+sudo chown newalex:newalex /home/newalex
+sudo chmod 755 /home/newalex
+
+6. проверить папку на наличие: ls -ld /home/newalex
