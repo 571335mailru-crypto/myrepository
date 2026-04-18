@@ -85,3 +85,18 @@ sudo chown newalex:newalex /home/newalex
 sudo chmod 755 /home/newalex
 
 6. проверить папку на наличие: ls -ld /home/newalex
+
+9)Определите файл, в который записываются записи журнала аудита команды su
+
+Записываю в файле /var/log/auth.log
+
+10)Определите требования к минимальной длине пароля
+Проверим, создав юзера и зададим пароль, начинай от одного символа 
+sudo useradd -m testuser
+
+sudo passwd testuser
+
+Был введен 1 символ: passwd: password updated successfully
+
+Ответ: минимальная длина 1 символ.Не заданы настройки о минимальной длине в системе. 
+
